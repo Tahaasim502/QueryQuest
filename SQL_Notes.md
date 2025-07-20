@@ -12,11 +12,17 @@ USE ShopDB;
 -- Create Employees table
 CREATE TABLE Employees (
     id INT PRIMARY KEY,
+    
     name VARCHAR(50),
+    
     salary INT,
+    
     managerId INT,
+    
     gender VARCHAR(10),
+   
     age INT,
+    
     department VARCHAR(50)
 );
 
