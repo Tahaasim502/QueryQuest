@@ -33,50 +33,64 @@ Use `DISTINCT` to remove duplicate values:
 Filter records that meet `certain conditions`:
 
 `SELECT coins FROM sales`
+
 `WHERE amount < 20;`
 
 ✅ Returns coins where amount is less than 20.
 
 ----
 
-## 🔗 Logical Operators — AND, OR, NOT
+## 🔗 Logical Operators — `AND`, `OR`, `NOT`
 -- AND Example  
-SELECT name FROM people
-WHERE gender = 'male' AND age < 18;
+`SELECT name FROM people`
+
+`WHERE gender = 'male' AND age < 18;`
 
 -- OR Example  
-SELECT name FROM people
-WHERE gender = 'male' OR age < 18;
+`SELECT name FROM people`
+
+`WHERE gender = 'male' OR age < 18;`
 
 -- NOT Example  
-SELECT name FROM people
-WHERE NOT gender = 'male';
+`SELECT name FROM people`
+
+`WHERE NOT gender = 'male';`
 
 ---
 
 ## 🧮 Multiple Conditions with Parentheses
 
 -- Without parentheses  
-WHERE gender = 'male' OR age < 18 AND amount < 13;  
+
+`WHERE gender = 'male' OR age < 18 AND amount < 13;`
+
+AND operator has more priority compared to OR operator, so when SQL reads the line it will `first` carryout age < 18 AND amount < 13 
+Then combines the result with gender = 'male' using OR 
+returns everything.
 
 -- With parentheses for correct logic  
-WHERE (gender = 'male' OR age < 18) AND amount < 13;
+
+`WHERE (gender = 'male' OR age < 18) AND amount < 13;`
+
+Evaluates (gender = 'male' OR age < 18) first
+
+Then combines the result with amount < 13 using AND
 
 ---
 
 ## 📝 CHAR_LENGTH Function
 
-Check the length of strings:
+Check the `length` of strings:
 
-SELECT CHAR_LENGTH(name) FROM people;
+`SELECT CHAR_LENGTH(name) FROM people;`
 
 ✅ Boolean Values
 
-SQL uses TRUE or FALSE values (also written as 1 and 0).
+SQL uses `TRUE` or `FALSE` values (also written as 1 and 0).
 
 You can filter using:
 
-WHERE is_active IS TRUE;
+`WHERE is_active IS TRUE;`
 
 ---
 
