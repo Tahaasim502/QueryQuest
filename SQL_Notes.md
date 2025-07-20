@@ -49,8 +49,6 @@ DATETIME → Date with time
 
 DECIMAL(5, 2) → Decimal with 5 digits total, 2 after decimal
 
----
-
 `CREATE TABLE employees
 (
     ID INT,
@@ -58,6 +56,54 @@ DECIMAL(5, 2) → Decimal with 5 digits total, 2 after decimal
     price DECIMAL(5, 2)
 );`
 
+---
+
+## ✏️ Modifying Tables
+
+✅ Rename Table
+
+`RENAME TABLE employees TO empInfo;`
+
+---
+
+## ➕ Add New Column
+
+`ALTER TABLE employees`
+
+`ADD priceID VARCHAR(15);`
+
+---
+
+## 📝 Rename a Column
+
+
+`ALTER TABLE employees`
+
+`RENAME COLUMN name TO empName;`
+
+---
+
+## 🛠️ Change Data Type of a Column
+
+`ALTER TABLE employees`
+
+`MODIFY COLUMN name VARCHAR(60);`
+
+## 🔄 Change Column Position
+
+`ALTER TABLE employees`
+
+`MODIFY price DECIMAL(5,2) AFTER name;`
+
+---
+
+## ❌ Drop a Column
+
+`ALTER TABLE employees`
+
+`DROP COLUMN price;`
+
+---
 
 ## 📑 Tables, Rows, and Columns  
 
