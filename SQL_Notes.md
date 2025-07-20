@@ -20,7 +20,7 @@ A database is a large bucket that stores data in an organized manner.
 
 ## ✨ DISTINCT — Removing Duplicates
 
-Use DISTINCT to remove duplicate values:
+Use `DISTINCT` to remove duplicate values:
 
 `SELECT DISTINCT country FROM sales;`
 
@@ -30,11 +30,10 @@ Use DISTINCT to remove duplicate values:
 
 ## 🎯 Filtering Data with WHERE Clause
 
-Filter records that meet certain conditions:
+Filter records that meet `certain conditions`:
 
-SELECT coins FROM sales
-
-WHERE amount < 20;
+`SELECT coins FROM sales`
+`WHERE amount < 20;`
 
 ✅ Returns coins where amount is less than 20.
 
