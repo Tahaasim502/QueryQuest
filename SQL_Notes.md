@@ -13,8 +13,8 @@ A database is a large bucket that stores data in an organized manner.
 - Use `SELECT` and `FROM` to extract data.  
 
 
-```SELECT column1, column2 FROM table_name; -- Select specific columns  
-```SELECT * FROM table_name; -- Select all columns
+`SELECT column1, column2 FROM table_name; -- Select specific columns`  
+`SELECT * FROM table_name; -- Select all columns`
 
 ---
 
@@ -22,7 +22,7 @@ A database is a large bucket that stores data in an organized manner.
 
 Use DISTINCT to remove duplicate values:
 
-SELECT DISTINCT country FROM sales;
+`SELECT DISTINCT country FROM sales;`
 
 ✅ This returns unique countries only.
 
