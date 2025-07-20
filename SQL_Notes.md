@@ -5,6 +5,59 @@ A database is a large bucket that stores data in an organized manner.
 
 ---
 
+## 🗂️ Creating a Database
+
+`CREATE DATABASE myDB;`
+
+- Semicolon is needed at the end of every SQL statement.
+
+- SQL syntax is case-insensitive (both uppercase & lowercase work).
+
+---
+
+## ➡️ Use a Database
+
+`USE myDB;` -- Sets the database as the default schema
+
+---
+
+## ❌ Drop a Database
+
+`DROP DATABASE myDB;`
+
+---
+
+## 🔒 Set Database to Read-Only Mode
+
+`ALTER DATABASE myDB READ ONLY = 1;` 
+-- 1 means true (locked)
+-- Set to 0 to allow modifications
+
+---
+
+## 📝 Creating a Table
+
+Common Data Types:
+
+VARCHAR(20) → String with max 20 characters
+
+INT → Whole number
+
+DATE → Only date
+
+DATETIME → Date with time
+
+DECIMAL(5, 2) → Decimal with 5 digits total, 2 after decimal
+
+---
+
+`CREATE TABLE employees
+(
+    ID INT,
+    name VARCHAR(50),
+    price DECIMAL(5, 2)
+);`
+
 
 ## 📑 Tables, Rows, and Columns  
 
