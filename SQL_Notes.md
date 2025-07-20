@@ -39,15 +39,15 @@ A database is a large bucket that stores data in an organized manner.
 
 Common Data Types:
 
-VARCHAR(20) → String with max 20 characters
+- VARCHAR(20) → String with max 20 characters
 
-INT → Whole number
+- INT → Whole number
 
-DATE → Only date
+- DATE → Only date
 
-DATETIME → Date with time
+- DATETIME → Date with time
 
-DECIMAL(5, 2) → Decimal with 5 digits total, 2 after decimal
+- DECIMAL(5, 2) → Decimal with 5 digits total, 2 after decimal
 
 `CREATE TABLE employees
 (
@@ -69,7 +69,6 @@ DECIMAL(5, 2) → Decimal with 5 digits total, 2 after decimal
 ## ➕ Add New Column
 
 `ALTER TABLE employees`
-
 `ADD priceID VARCHAR(15);`
 
 ---
@@ -78,7 +77,6 @@ DECIMAL(5, 2) → Decimal with 5 digits total, 2 after decimal
 
 
 `ALTER TABLE employees`
-
 `RENAME COLUMN name TO empName;`
 
 ---
@@ -86,13 +84,11 @@ DECIMAL(5, 2) → Decimal with 5 digits total, 2 after decimal
 ## 🛠️ Change Data Type of a Column
 
 `ALTER TABLE employees`
-
 `MODIFY COLUMN name VARCHAR(60);`
 
 ## 🔄 Change Column Position
 
 `ALTER TABLE employees`
-
 `MODIFY price DECIMAL(5,2) AFTER name;`
 
 ---
@@ -100,7 +96,6 @@ DECIMAL(5, 2) → Decimal with 5 digits total, 2 after decimal
 ## ❌ Drop a Column
 
 `ALTER TABLE employees`
-
 `DROP COLUMN price;`
 
 ---
@@ -132,7 +127,6 @@ Use `DISTINCT` to remove duplicate values:
 Filter records that meet `certain conditions`:
 
 `SELECT coins FROM sales`
-
 `WHERE amount < 20;`
 
 ✅ Returns coins where amount is less than 20.
@@ -142,17 +136,14 @@ Filter records that meet `certain conditions`:
 ## 🔗 Logical Operators — `AND`, `OR`, `NOT`
 -- AND Example  
 `SELECT name FROM people`
-
 `WHERE gender = 'male' AND age < 18;`
 
 -- OR Example  
 `SELECT name FROM people`
-
 `WHERE gender = 'male' OR age < 18;`
 
 -- NOT Example  
 `SELECT name FROM people`
-
 `WHERE NOT gender = 'male';`
 
 ---
