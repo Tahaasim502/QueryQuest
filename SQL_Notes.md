@@ -69,6 +69,7 @@ Common Data Types:
 ## ➕ Add New Column
 
 `ALTER TABLE employees`
+
 `ADD priceID VARCHAR(15);`
 
 ---
@@ -77,6 +78,7 @@ Common Data Types:
 
 
 `ALTER TABLE employees`
+
 `RENAME COLUMN name TO empName;`
 
 ---
@@ -84,11 +86,13 @@ Common Data Types:
 ## 🛠️ Change Data Type of a Column
 
 `ALTER TABLE employees`
+
 `MODIFY COLUMN name VARCHAR(60);`
 
 ## 🔄 Change Column Position
 
 `ALTER TABLE employees`
+
 `MODIFY price DECIMAL(5,2) AFTER name;`
 
 ---
@@ -96,6 +100,7 @@ Common Data Types:
 ## ❌ Drop a Column
 
 `ALTER TABLE employees`
+
 `DROP COLUMN price;`
 
 ---
@@ -108,6 +113,7 @@ Common Data Types:
 
 
 `SELECT column1, column2 FROM table_name; -- Select specific columns`  
+
 `SELECT * FROM table_name; -- Select all columns`
 
 ---
@@ -127,6 +133,7 @@ Use `DISTINCT` to remove duplicate values:
 Filter records that meet `certain conditions`:
 
 `SELECT coins FROM sales`
+
 `WHERE amount < 20;`
 
 ✅ Returns coins where amount is less than 20.
@@ -136,14 +143,17 @@ Filter records that meet `certain conditions`:
 ## 🔗 Logical Operators — `AND`, `OR`, `NOT`
 -- AND Example  
 `SELECT name FROM people`
+
 `WHERE gender = 'male' AND age < 18;`
 
 -- OR Example  
 `SELECT name FROM people`
+
 `WHERE gender = 'male' OR age < 18;`
 
 -- NOT Example  
 `SELECT name FROM people`
+
 `WHERE NOT gender = 'male';`
 
 ---
@@ -185,6 +195,22 @@ You can filter using:
 ---
 
 ## 🏁 Summary
+✅ CREATE DATABASE — Create a New Database
+
+✅ DROP DATABASE — Delete an Existing Database
+
+✅ RENAME DATABASE — Rename a Database (Not directly supported, requires workaround)
+
+✅ USE DATABASE — Select Active Database
+
+✅ CREATE TABLE — Create New Table
+
+✅ DROP TABLE — Delete a Table
+
+✅ RENAME TABLE — Rename a Table
+
+✅ ALTER TABLE — Modify Table Structure
+
 ✅ SELECT + FROM — Basic Data Retrieval
 
 ✅ DISTINCT — Remove Duplicates
