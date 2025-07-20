@@ -12,9 +12,9 @@ A database is a large bucket that stores data in an organized manner.
 - The number of columns is usually fixed, but rows can be unlimited.  
 - Use `SELECT` and `FROM` to extract data.  
 
-sql
-SELECT column1, column2 FROM table_name; -- Select specific columns  
-SELECT * FROM table_name; -- Select all columns
+
+```SELECT column1, column2 FROM table_name; -- Select specific columns  
+```SELECT * FROM table_name; -- Select all columns
 
 ---
 
