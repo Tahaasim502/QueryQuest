@@ -105,6 +105,66 @@ Common Data Types:
 
 ---
 
+## ✅ Inserting Rows
+
+`INSERT INTO table_name VALUES (...);` 
+
+`-- Inserts a full row. Must match the table’s column order and data types.`
+
+`INSERT INTO table_name (column1, column2, ...) VALUES (...); `
+
+`-- Inserts only into specific columns; others will be NULL.`
+
+Example:
+
+`INSERT INTO sales VALUES`
+
+`(201, 101, 1, 1, '2025-07-01'),`
+
+`(202, 102, 2, 2, '2025-07-02');`
+
+---
+
+## ✅ Updating Rows
+
+`UPDATE table_name`
+
+`SET column_name = value`
+
+`WHERE condition;`
+
+Example:
+
+`UPDATE sales`
+
+`SET amount = 10`
+
+`WHERE saleID = 205;`
+
+If you omit `WHERE`, all rows will be updated.
+
+---
+
+## ✅ Deleting Rows
+
+`DELETE FROM table_name`
+
+`WHERE condition;`
+
+Always use WHERE unless you want to delete all rows.
+
+---
+
+## ✅ Autocommit, Commit & Rollback
+
+Autocommit (ON by default): Every statement is automatically saved.
+
+COMMIT: Manually save changes.
+
+ROLLBACK: Undo changes back to the last COMMIT point.
+
+
+
 ## 📑 Tables, Rows, and Columns  
 
 - Tables have **rows** (records) and **columns** (fields).  
@@ -194,6 +254,36 @@ You can filter using:
 
 ---
 
+## ✅ NULL Handling
+
+IS NULL: Checks if a column has no value.
+
+IS NOT NULL: Checks if a column contains any value.
+
+---
+
+## ✅ Sorting Results
+
+`SELECT * FROM table_name`
+
+`ORDER BY column1 ASC, column2 DESC;`
+
+`ASC: Ascending order (default).`
+
+`DESC: Descending order.`
+
+---
+
+## ✅ Limiting Results
+
+`SELECT * FROM table_name`
+
+`LIMIT 5;`
+
+Limits the output to 5 rows.
+
+---
+
 ## 🏁 Summary
 ✅ CREATE DATABASE — Create a New Database
 
@@ -208,6 +298,12 @@ You can filter using:
 ✅ DROP TABLE — Delete a Table
 
 ✅ RENAME TABLE — Rename a Table
+
+✅ Inserting Data - Add rows 
+
+✅ Updating Data - Modifying data 
+
+✅ Deleting Data - Deleting Unwanted data
 
 ✅ ALTER TABLE — Modify Table Structure
 
@@ -224,6 +320,14 @@ You can filter using:
 ✅ Parentheses () — Control Logic Flow
 
 ✅ Boolean Filters
+
+✅ Autocommit / Commit / Rollback
+
+✅ NULL Handling
+
+✅ Sorting Results
+
+✅ Limiting Results
 
 ---
 Notes : Made by Taha Asim
