@@ -24,4 +24,3 @@ These notes are designed not just to teach you SQL basics but to prepare you for
 
 Start simple, dream big, and grow your SQL skills step-by-step — your data adventure begins here!
 
-*.sql linguist-language=SQL
