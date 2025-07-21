@@ -1,1 +1,3 @@
 *.sql linguist-language=SQL
+LICENSE linguist-documentation
+README.md linguist-documentation
