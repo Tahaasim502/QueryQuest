@@ -284,6 +284,99 @@ Limits the output to 5 rows.
 
 ---
 
+## ✅ Filtering Records
+
+- IN — Use when checking multiple possible values:
+
+`SELECT * FROM sales`
+
+`WHERE city IN ('Warsaw', 'Berlin', 'Katowise');`
+
+- BETWEEN — For a range of values (inclusive):
+
+`SELECT * FROM sales`
+
+`WHERE amount BETWEEN 7 AND 13;`
+
+- LIKE — Pattern matching:
+
+`% — any number of characters`
+
+`_ — exactly one character`
+
+Examples:
+
+`WHERE name LIKE 'l%'      -- starts with 'l'`
+
+`WHERE name LIKE '%l'      -- ends with 'l'`
+
+`WHERE name LIKE '%l%'     -- contains 'l'`
+
+`WHERE name LIKE '_l%'     -- 'l' is second character`
+
+`WHERE name LIKE '%l_'     -- 'l' is second last character`
+
+---
+
+## ✅ String Functions
+
+RIGHT() — Extract characters from the right:
+
+`SELECT RIGHT(name, 3) FROM sales;  -- Last 3 characters of name`
+
+---
+
+## ✅ Aliases
+
+AS — Rename column in result:
+
+`SELECT amount AS no_item FROM sales;`
+
+Working with Dates
+
+`CURRENT_DATE — Returns today's date`
+
+`CURRENT_TIME — Returns current time`
+
+`NOW() — Returns current date and time`
+
+Example with date manipulation:
+
+`SELECT CURRENT_DATE + 1;  -- Tomorrow's date`
+
+`SELECT CURRENT_DATE - 1;  -- Yesterday's date`
+
+---
+
+## ✅ Constraints
+
+- UNIQUE — Ensures unique values in a column:
+
+`CREATE TABLE products (
+    product_id INT UNIQUE
+);`
+
+- CHECK — Enforces a condition on values:
+
+`CREATE TABLE sales (
+  amount INT CHECK (amount >= 13)
+);`
+
+Named CHECK constraint:
+
+`CREATE TABLE sales (
+  amount INT,
+  CONSTRAINT chk_amount CHECK (amount >= 13)
+);`
+
+- DEFAULT — Sets a default value if none is provided:
+
+`CREATE TABLE products (
+  quantity INT DEFAULT 0
+);`
+
+---
+
 ## 🏁 Summary
 ✅ CREATE DATABASE — Create a New Database
 
@@ -328,6 +421,12 @@ Limits the output to 5 rows.
 ✅ Sorting Results
 
 ✅ Limiting Results
+
+✅ Filtering Records - IN/BETWEEN/LIKE
+
+✅ STRING FUNCTIONS - AS/DATE
+
+✅ CONSTRAINTS - DATE/CHECK/DEFAULT
 
 ---
 Notes : Made by Taha Asim
