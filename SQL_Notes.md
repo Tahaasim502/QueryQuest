@@ -377,6 +377,117 @@ Named CHECK constraint:
 
 ---
 
+## 🔢 Arithmetic Operations
+
+You can perform basic arithmetic directly in SQL queries:
+
+`SELECT price * quantity AS total_price FROM sales;`
+
+Supported operators: `+, -, *, /`
+
+---
+
+## 🧮 Multiple Column Calculations
+
+Combine multiple columns for complex calculations:
+
+`SELECT (price * quantity) - discount AS final_price FROM sales;`
+
+---
+
+## ➗ Modulo Operator (%)
+
+Returns the remainder of a division:
+
+`SELECT id % 2 AS remainder FROM users;`
+
+If result is 0 → divisible
+
+If result is 1 → not divisible
+
+---
+
+## 🔁 ROUND Function
+
+Rounds numbers to a specified decimal place:
+
+`SELECT ROUND(price, 2) AS rounded_price FROM products;`
+
+Behavior:
+
+**Omitted**: rounds to whole number
+
+**Positive value**: rounds right of the decimal
+
+**Negative value**: rounds left of the decimal
+
+---
+
+## 🔐 Primary Key (PRIMARY KEY)
+
+Uniquely identifies each row in a table
+
+**Cannot be NULL or duplicated**
+
+**Only one primary key per table**
+
+Example:
+
+`empID INT PRIMARY KEY;`
+
+---
+
+## 🔗 Foreign Key (FOREIGN KEY)
+
+Links two tables using the PK of another table
+
+Prevents deletion of values that are referenced in another table
+
+Example:
+
+`empPhoneNumb INT,`
+
+`FOREIGN KEY (empPhoneNumb) REFERENCES employees(phone);`
+
+REFERENCE Table_name(pk of that column)
+
+---
+
+## 🔄 AUTO_INCREMENT
+
+Automatically increments column value by 1 for each new row
+
+Only used with a key
+
+Default start value is 1 (can be changed)
+
+empID INT PRIMARY KEY AUTO_INCREMENT;
+
+---
+
+## 🤔 Conditional Logic with IF
+
+Works like a ternary operator:
+
+`SELECT name,`
+       `IF(salary > 5000, 'High', 'Low') AS salary_status`
+`FROM employees;`
+
+**IF(salary > 5000, value_if_true, value_if_false)**
+
+---
+
+## 🔤 CONCAT Function
+
+Combines multiple strings/columns into one
+
+Syntax:
+
+`SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM employees;`
+
+
+---
+
 ## 🏁 Summary
 ✅ CREATE DATABASE — Create a New Database
 
@@ -427,6 +538,14 @@ Named CHECK constraint:
 ✅ STRING FUNCTIONS - AS/DATE
 
 ✅ CONSTRAINTS - DATE/CHECK/DEFAULT
+
+✅ Arithmetic Operations - Basic add/subtraction/multiplication/division
+
+✅ Modulo Operator - %
+
+✅ Logical Condition - if
+
+✅ CONCAT - Combining columns
 
 ---
 Notes : Made by Taha Asim
