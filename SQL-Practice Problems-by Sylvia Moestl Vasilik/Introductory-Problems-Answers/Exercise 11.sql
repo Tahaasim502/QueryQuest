@@ -1,0 +1,1 @@
+SELECT BirthDate FROM employees;
