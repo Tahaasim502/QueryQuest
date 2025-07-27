@@ -563,6 +563,8 @@ Syntax examples:
 
 `ON left_table.fk = right_table.pk;`
 
+---
+
 ## Common SQL Functions
 
 - COUNT() — counts rows or non-null values
@@ -637,6 +639,12 @@ Syntax examples:
 ✅ Logical Condition - if
 
 ✅ CONCAT - Combining columns
+
+✅ DATE - STRFTIME/JULIANDAY
+
+✅ JOINS - INNER/LEFT/RIGHT
+
+✅ Functions
 
 ---
 Notes : Made by Taha Asim
