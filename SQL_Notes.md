@@ -485,6 +485,97 @@ Syntax:
 
 `SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM employees;`
 
+---
+
+## 📅 Date Functions
+
+- JULIANDAY(date)
+
+Calculates the Julian day number for the given date — the count of days since January 1, 4713 BC. Useful for date arithmetic.
+
+- STRFTIME(format, date)
+
+Formats dates or extracts specific parts (year, month, day, etc.). Examples:
+
+`SELECT DATE('2023-05-15 13:45:00');       -- Returns: 2023-05-15`
+
+`SELECT DATE('now');                        -- Returns current date`
+
+-- Extract year
+
+`SELECT STRFTIME('%Y', '2023-05-15');     -- Returns: 2023`
+
+-- Extract month
+
+`SELECT STRFTIME('%m', '2023-05-15');     -- Returns: 05`
+
+-- Extract day
+
+`SELECT STRFTIME('%d', '2023-05-15');     -- Returns: 15`
+
+-- Combine year and day
+
+`SELECT STRFTIME('%Y:%d', '2023-05-15');  -- Returns: 2023:15`
+
+Common format specifiers:
+
+- %Y — Year (4 digits)
+
+- %m — Month (01-12)
+
+- %d — Day of month (01-31)
+
+- %H — Hour (00-23)
+
+- %M — Minute (00-59)
+
+- %S — Second (00-59)
+
+---
+
+## Joins
+
+Joins combine rows from two or more tables based on related columns:
+
+- INNER JOIN
+
+Returns only rows where matching keys exist in both tables.
+
+- LEFT JOIN
+
+Returns all rows from the left table, and matched rows from the right table (or NULL if no match).
+
+- RIGHT JOIN
+
+Returns all rows from the right table, and matched rows from the left table (or NULL if no match).
+
+Syntax examples:
+
+`SELECT * FROM left_table INNER JOIN right_table`
+
+`ON left_table.fk = right_table.pk;`
+
+`SELECT * FROM left_table LEFT JOIN right_table`
+
+`ON left_table.fk = right_table.pk;`
+
+`SELECT * FROM left_table RIGHT JOIN right_table`
+
+`ON left_table.fk = right_table.pk;`
+
+## Common SQL Functions
+
+- COUNT() — counts rows or non-null values
+
+- AVG() — average value
+
+- MIN(), MAX() — minimum and maximum values
+
+- STRFTIME() — format or extract date parts
+
+- JULIANDAY() — date arithmetic based on Julian days
+
+- CONCAT() — concatenate strings
 
 ---
 
