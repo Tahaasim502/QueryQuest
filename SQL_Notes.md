@@ -551,9 +551,10 @@ Returns all rows from the right table, and matched rows from the left table (or 
 
 Syntax examples:
 
-`SELECT * FROM left_table INNER JOIN right_table`
-
-`ON left_table.fk = right_table.pk;`
+```sql
+SELECT * FROM left_table INNER JOIN right_table
+ON left_table.fk = right_table.pk;
+```
 
 `SELECT * FROM left_table LEFT JOIN right_table`
 
