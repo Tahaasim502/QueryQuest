@@ -581,6 +581,100 @@ Syntax examples:
 
 ---
 
+## Built-In-Aggregate Functions:
+
+- It receives a field as a input and calculates something over the field and returns the answer.
+- Common aggregate functions
+    - MAX - Returns the maximum amount
+    - MIN - Returns the minimum amount
+    - AVG - Returns the average amount
+    - COUNT - Returns the total count of the field
+    - SUM- Returns the total amount of the field
+- When working with aggregate functions we often need to compare the rows with an aggregate value
+    
+    ```sql
+    SELECT price - AVG(price) FROM items;
+    This will not work because SQL doesnt allows mixing of row-level-data and
+    aggregate result, hence we need to use nested queries
+    
+    SELECT price -(SELECT AVG(price) FROM items) FROM items;
+    The aggregate function is first worked out and then the main query is done row by 
+    row.
+    ```
+    
+    - Nested Queries are mostly used in :
+        - Comparing each value to the aggregate.
+        - Calculating the percentage total.
+        - Finding the difference from max or min values.
+
+---
+
+## Group By
+
+- In order to calculate data for a specific group we use the group by method.
+- If we want to filter the result based on aggregate we are going to use the **HAVING** keyword.
+    - The reason we cannot use where is because, it doesn’t works on the aggregate result.
+    - If we want we can combine the where + having and having is a keyword that will work as long as group by is written.
+        
+        ```sql
+        SELECT category, AVG(price) FROM table1
+        WHERE price > 25
+        GROUP BY category
+        HAVING AVG(price) > 40
+        This will first go record by record and filter all the records for 
+        which the price is greater than 25, and only after that will it run the GROUP BY clause and filter every category for which the average price is greater than 40.
+        ```
+        
+
+---
+
+## Subqueries
+
+- It is used to combine multiple queries into one.
+    
+    ```sql
+    SELECT id, salary
+    FROM employees
+    WHERE salary > (
+        SELECT AVG(salary) --> inner query 
+        FROM employees
+    );--> rest is the outer query
+    ```
+    
+    - A subquery helps us find employees who earn more than the company's average salary by first calculating the average (inner query) and then using that value to filter employees (outer query).
+
+---
+
+## UNION
+
+- It is used for combining two different tables using select statement.
+    - Make sure the number of columns are same or distinct or else an error will occur.
+    - UNION ALL is used to return all the duplicate values present in the table.
+        
+        ```sql
+        SELECT firstName, LastName FROM emp
+        UNION
+        SELECT firstName, LastName FROM customers
+        ```
+        
+
+---
+
+## Self Joins
+
+- Its a way of stitching two tables together in order to find a specific result.
+    - Syntax:
+    
+    ```sql
+    SELECT alias1.column_name1, alias2.column_name2
+    	FROM table_name AS alias1
+    JOIN table_name AS alias2 ON alias1.column_name = alias2.related _column
+    ```
+    
+    - Real world example:
+
+---
+
 ## 🏁 Summary
 ✅ CREATE DATABASE — Create a New Database
 
