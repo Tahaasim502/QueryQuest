@@ -94,11 +94,10 @@ MODIFY price DECIMAL(5,2) AFTER name;
 ---
 
 ## ❌ Drop a Column
-
-`ALTER TABLE employees`
-
-`DROP COLUMN price;`
-
+```sql
+ALTER TABLE employees
+DROP COLUMN price;
+```
 ---
 
 ## ✅ Inserting Rows
@@ -160,19 +159,18 @@ ROLLBACK: Undo changes back to the last COMMIT point.
 - The number of columns is usually fixed, but rows can be unlimited.  
 - Use `SELECT` and `FROM` to extract data.  
 
-
-`SELECT column1, column2 FROM table_name; -- Select specific columns`  
-
-`SELECT * FROM table_name; -- Select all columns`
-
+```sql
+SELECT column1, column2 FROM table_name; -- Select specific columns 
+SELECT * FROM table_name; -- Select all columns
+```
 ---
 
 ## ✨ DISTINCT — Removing Duplicates
 
 Use `DISTINCT` to remove duplicate values:
-
-`SELECT DISTINCT country FROM sales;`
-
+```sql
+SELECT DISTINCT country FROM sales;
+```
 ✅ This returns unique countries only.
 
 ---
@@ -180,47 +178,46 @@ Use `DISTINCT` to remove duplicate values:
 ## 🎯 Filtering Data with WHERE Clause
 
 Filter records that meet `certain conditions`:
-
-`SELECT coins FROM sales`
-
-`WHERE amount < 20;`
-
+```sql
+SELECT coins FROM sales
+WHERE amount < 20;
+```
 ✅ Returns coins where amount is less than 20.
 
 ----
 
 ## 🔗 Logical Operators — `AND`, `OR`, `NOT`
 -- AND Example  
-`SELECT name FROM people`
-
-`WHERE gender = 'male' AND age < 18;`
-
+```sql
+SELECT name FROM people
+WHERE gender = 'male' AND age < 18;
+```
 -- OR Example  
-`SELECT name FROM people`
-
-`WHERE gender = 'male' OR age < 18;`
-
+```sql
+SELECT name FROM people
+WHERE gender = 'male' OR age < 18;
+```
 -- NOT Example  
-`SELECT name FROM people`
-
-`WHERE NOT gender = 'male';`
-
+```sql
+SELECT name FROM people
+WHERE NOT gender = 'male';
+```
 ---
 
 ## 🧮 Multiple Conditions with Parentheses
 
 -- Without parentheses  
-
-`WHERE gender = 'male' OR age < 18 AND amount < 13;`
-
+```sql
+WHERE gender = 'male' OR age < 18 AND amount < 13;
+```
 AND operator has more priority compared to OR operator, so when SQL reads the line it will `first` carryout age < 18 AND amount < 13 
 Then combines the result with gender = 'male' using OR 
 returns everything.
 
 -- With parentheses for correct logic  
-
-`WHERE (gender = 'male' OR age < 18) AND amount < 13;`
-
+```sql
+WHERE (gender = 'male' OR age < 18) AND amount < 13;
+```
 Evaluates (gender = 'male' OR age < 18) first
 
 Then combines the result with amount < 13 using AND
@@ -230,17 +227,17 @@ Then combines the result with amount < 13 using AND
 ## 📝 CHAR_LENGTH Function
 
 Check the `length` of strings:
-
-`SELECT CHAR_LENGTH(name) FROM people;`
-
+```sql
+SELECT CHAR_LENGTH(name) FROM people;
+```
 ✅ Boolean Values
 
 SQL uses `TRUE` or `FALSE` values (also written as 1 and 0).
 
 You can filter using:
-
-`WHERE is_active IS TRUE;`
-
+```sql
+WHERE is_active IS TRUE;
+```
 ---
 
 ## ✅ NULL Handling
@@ -252,11 +249,10 @@ IS NOT NULL: Checks if a column contains any value.
 ---
 
 ## ✅ Sorting Results
-
-`SELECT * FROM table_name`
-
-`ORDER BY column1 ASC, column2 DESC;`
-
+```sql
+SELECT * FROM table_name
+ORDER BY column1 ASC, column2 DESC;
+```
 `ASC: Ascending order (default).`
 
 `DESC: Descending order.`
@@ -264,11 +260,10 @@ IS NOT NULL: Checks if a column contains any value.
 ---
 
 ## ✅ Limiting Results
-
-`SELECT * FROM table_name`
-
-`LIMIT 5;`
-
+```sql
+SELECT * FROM table_name
+LIMIT 5;
+```
 Limits the output to 5 rows.
 
 ---
@@ -276,17 +271,16 @@ Limits the output to 5 rows.
 ## ✅ Filtering Records
 
 - IN — Use when checking multiple possible values:
-
-`SELECT * FROM sales`
-
-`WHERE city IN ('Warsaw', 'Berlin', 'Katowise');`
-
+```sql
+SELECT * FROM sales
+WHERE city IN ('Warsaw', 'Berlin', 'Katowise');
+```
 - BETWEEN — For a range of values (inclusive):
 
-`SELECT * FROM sales`
-
-`WHERE amount BETWEEN 7 AND 13;`
-
+```sql
+SELECT * FROM sales
+WHERE amount BETWEEN 7 AND 13;
+```
 - LIKE — Pattern matching:
 
 `% — any number of characters`
