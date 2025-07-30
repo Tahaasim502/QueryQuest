@@ -49,6 +49,7 @@ Common Data Types:
 - DATETIME → Date with time
 
 - DECIMAL(5, 2) → Decimal with 5 digits total, 2 after decimal
+
 ```sql
 CREATE TABLE employees
 (
@@ -62,12 +63,14 @@ CREATE TABLE employees
 ## ✏️ Modifying Tables
 
 ✅ Rename Table
+
 ```sql
 RENAME TABLE employees TO empInfo;
 ```
 ---
 
 ## ➕ Add New Column
+
 ```sql
 ALTER TABLE employees
 ADD priceID VARCHAR(15);
@@ -75,6 +78,7 @@ ADD priceID VARCHAR(15);
 ---
 
 ## 📝 Rename a Column
+
 ```sql
 ALTER TABLE employees
 RENAME COLUMN name TO empName;
@@ -87,6 +91,7 @@ ALTER TABLE employees
 MODIFY COLUMN name VARCHAR(60);
 ```
 ## 🔄 Change Column Position
+
 ```sql
 ALTER TABLE employees
 MODIFY price DECIMAL(5,2) AFTER name;
@@ -94,6 +99,7 @@ MODIFY price DECIMAL(5,2) AFTER name;
 ---
 
 ## ❌ Drop a Column
+
 ```sql
 ALTER TABLE employees
 DROP COLUMN price;
@@ -101,6 +107,7 @@ DROP COLUMN price;
 ---
 
 ## ✅ Inserting Rows
+
 ```sql
 INSERT INTO table_name VALUES (...);
 ```
@@ -253,10 +260,13 @@ IS NOT NULL: Checks if a column contains any value.
 SELECT * FROM table_name
 ORDER BY column1 ASC, column2 DESC;
 ```
-`ASC: Ascending order (default).`
+```sql
+ASC: Ascending order (default).
+```
 
-`DESC: Descending order.`
-
+```sql
+DESC: Descending order.
+```
 ---
 
 ## ✅ Limiting Results
@@ -451,11 +461,11 @@ empID INT PRIMARY KEY AUTO_INCREMENT;
 ## 🤔 Conditional Logic with IF
 
 Works like a ternary operator:
-
-`SELECT name,`
-       `IF(salary > 5000, 'High', 'Low') AS salary_status`
-`FROM employees;`
-
+```sql
+SELECT name,
+       IF(salary > 5000, 'High', 'Low') AS salary_status
+FROM employees;
+```
 **IF(salary > 5000, value_if_true, value_if_false)**
 
 ---
