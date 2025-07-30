@@ -6,9 +6,9 @@ A database is a large bucket that stores data in an organized manner.
 ---
 
 ## 🗂️ Creating a Database
-
-`CREATE DATABASE myDB;`
-
+```sql
+CREATE DATABASE myDB;
+````
 - Semicolon is needed at the end of every SQL statement.
 
 - SQL syntax is case-insensitive (both uppercase & lowercase work).
