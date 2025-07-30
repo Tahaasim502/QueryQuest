@@ -22,14 +22,15 @@ CREATE DATABASE myDB;
 ---
 
 ## ❌ Drop a Database
-
-`DROP DATABASE myDB;`
-
+```sql
+DROP DATABASE myDB;
+```
 ---
 
 ## 🔒 Set Database to Read-Only Mode
-
-`ALTER DATABASE myDB READ ONLY = 1;` 
+```sql
+ALTER DATABASE myDB READ ONLY = 1;
+```
 -- 1 means true (locked)
 -- Set to 0 to allow modifications
 
@@ -48,53 +49,48 @@ Common Data Types:
 - DATETIME → Date with time
 
 - DECIMAL(5, 2) → Decimal with 5 digits total, 2 after decimal
-
-`CREATE TABLE employees
+```sql
+CREATE TABLE employees
 (
     ID INT,
     name VARCHAR(50),
     price DECIMAL(5, 2)
-);`
-
+);
+```
 ---
 
 ## ✏️ Modifying Tables
 
 ✅ Rename Table
-
-`RENAME TABLE employees TO empInfo;`
-
+```sql
+RENAME TABLE employees TO empInfo;
+```
 ---
 
 ## ➕ Add New Column
-
-`ALTER TABLE employees`
-
-`ADD priceID VARCHAR(15);`
-
+```sql
+ALTER TABLE employees
+ADD priceID VARCHAR(15);
+```
 ---
 
 ## 📝 Rename a Column
-
-
-`ALTER TABLE employees`
-
-`RENAME COLUMN name TO empName;`
-
+```sql
+ALTER TABLE employees
+RENAME COLUMN name TO empName;
+```
 ---
 
 ## 🛠️ Change Data Type of a Column
-
-`ALTER TABLE employees`
-
-`MODIFY COLUMN name VARCHAR(60);`
-
+```sql
+ALTER TABLE employees
+MODIFY COLUMN name VARCHAR(60);
+```
 ## 🔄 Change Column Position
-
-`ALTER TABLE employees`
-
-`MODIFY price DECIMAL(5,2) AFTER name;`
-
+```sql
+ALTER TABLE employees
+MODIFY price DECIMAL(5,2) AFTER name;
+```
 ---
 
 ## ❌ Drop a Column
@@ -106,9 +102,9 @@ Common Data Types:
 ---
 
 ## ✅ Inserting Rows
-
-`INSERT INTO table_name VALUES (...);` 
-
+```sql
+INSERT INTO table_name VALUES (...);
+```
 `-- Inserts a full row. Must match the table’s column order and data types.`
 
 `INSERT INTO table_name (column1, column2, ...) VALUES (...); `
@@ -116,41 +112,34 @@ Common Data Types:
 `-- Inserts only into specific columns; others will be NULL.`
 
 Example:
-
-`INSERT INTO sales VALUES`
-
-`(201, 101, 1, 1, '2025-07-01'),`
-
-`(202, 102, 2, 2, '2025-07-02');`
-
+```sql
+INSERT INTO sales VALUES
+(201, 101, 1, 1, '2025-07-01'),
+(202, 102, 2, 2, '2025-07-02');
+```
 ---
 
 ## ✅ Updating Rows
-
-`UPDATE table_name`
-
-`SET column_name = value`
-
-`WHERE condition;`
-
+```sql
+UPDATE table_name
+SET column_name = value
+WHERE condition;
+```
 Example:
-
-`UPDATE sales`
-
-`SET amount = 10`
-
-`WHERE saleID = 205;`
-
+```sql
+UPDATE sales
+SET amount = 10
+WHERE saleID = 205;
+```
 If you omit `WHERE`, all rows will be updated.
 
 ---
 
 ## ✅ Deleting Rows
-
-`DELETE FROM table_name`
-
-`WHERE condition;`
-
+```sql
+DELETE FROM table_name
+WHERE condition;
+```
 Always use WHERE unless you want to delete all rows.
 
 ---
