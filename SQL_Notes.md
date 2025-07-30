@@ -548,15 +548,14 @@ Syntax examples:
 SELECT * FROM left_table INNER JOIN right_table
 ON left_table.fk = right_table.pk;
 ```
-
-`SELECT * FROM left_table LEFT JOIN right_table`
-
-`ON left_table.fk = right_table.pk;`
-
-`SELECT * FROM left_table RIGHT JOIN right_table`
-
-`ON left_table.fk = right_table.pk;`
-
+```sql
+SELECT * FROM left_table LEFT JOIN right_table
+ON left_table.fk = right_table.pk;
+```
+```sql
+SELECT * FROM left_table RIGHT JOIN right_table
+ON left_table.fk = right_table.pk;
+```
 ---
 
 ## Common SQL Functions
@@ -733,6 +732,16 @@ ON left_table.fk = right_table.pk;
 ✅ JOINS - INNER/LEFT/RIGHT
 
 ✅ Functions
+
+✅ Aggregate Function
+
+✅ Group By
+
+✅ Subqueries
+
+✅ UNION
+
+✅ Self Joins
 
 ---
 Notes : Made by Taha Asim
